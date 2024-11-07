@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import { pretendard } from '@/lib/fonts';
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "esoop",
-  description: "esoop",
+  title: 'esoop',
+  description: 'esoop',
 };
 
 export default function RootLayout({
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko" className={`${pretendard.variable}`}>
       <body className={`antialiased`}>{children}</body>
     </html>
   );
