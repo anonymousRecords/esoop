@@ -1,6 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { FormField, FormRadioGroup, FormInput } from '@/components/ui/form';
-import { useFormContext } from 'react-hook-form';
 import { type BusinessDetailsSchema } from '@/schemas/selling-form/business-details';
 
 const MONTHLY_PROFIT_OPTIONS = [
@@ -18,8 +17,6 @@ type SellingFormValues = {
 };
 
 export const BusinessDetails = () => {
-  const { watch } = useFormContext<SellingFormValues>();
-
   return (
     <Card>
       {/* 매각 정보 */}

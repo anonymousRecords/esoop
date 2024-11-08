@@ -1,9 +1,4 @@
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-} from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { FormField, FormInput, FormTextarea } from '@/components/ui/form';
 import { useFormContext } from 'react-hook-form';
 import { type BusinessDescriptionSchema } from '@/schemas/selling-form/business-description';
@@ -14,9 +9,6 @@ type SellingFormValues = {
 };
 
 export const BusinessDescription = () => {
-  const { watch } = useFormContext<SellingFormValues>();
-  const description = watch('businessDescription.description') || '';
-
   return (
     <Card>
       <CardHeader>
