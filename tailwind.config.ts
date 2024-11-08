@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  darkMode: ['class'],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,46 +13,78 @@ const config: Config = {
         sans: ['var(--font-pretendard)'],
       },
       colors: {
-        // 주요 브랜드 색상
         primary: {
-          50: '#f0fdf9',
-          100: '#cdfaed',
-          200: '#9af5db',
-          300: '#60e8c7',
-          400: '#30d1ae',
-          500: '#18c19f', // 기본 primary 색상
-          600: '#0f927a',
-          700: '#117464',
-          800: '#125d51',
-          900: '#144d44',
-          950: '#052e29',
+          '50': '#f0fdf9',
+          '100': '#cdfaed',
+          '200': '#9af5db',
+          '300': '#60e8c7',
+          '400': '#30d1ae',
+          '500': '#18c19f',
+          '600': '#0f927a',
+          '700': '#117464',
+          '800': '#125d51',
+          '900': '#144d44',
+          '950': '#052e29',
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
         },
-        // 텍스트 및 배경 색상
         text: {
-          50: '#f6f6f6',
-          100: '#e7e7e7',
-          200: '#d1d1d1',
-          300: '#b0b0b0',
-          400: '#888888',
-          500: '#6d6d6d',
-          600: '#5d5d5d',
-          700: '#4f4f4f',
-          800: '#454545',
-          900: '#363636', // 기본 텍스트 색상
-          950: '#262626',
+          '50': '#f6f6f6',
+          '100': '#e7e7e7',
+          '200': '#d1d1d1',
+          '300': '#b0b0b0',
+          '400': '#888888',
+          '500': '#6d6d6d',
+          '600': '#5d5d5d',
+          '700': '#4f4f4f',
+          '800': '#454545',
+          '900': '#363636',
+          '950': '#262626',
         },
-        // 기타 UI 색상
-        border: '#e7e7e7',
-        background: '#ffffff',
-        foreground: '#363636',
+        border: 'hsl(var(--border))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        chart: {
+          '1': 'hsl(var(--chart-1))',
+          '2': 'hsl(var(--chart-2))',
+          '3': 'hsl(var(--chart-3))',
+          '4': 'hsl(var(--chart-4))',
+          '5': 'hsl(var(--chart-5))',
+        },
       },
       borderRadius: {
-        lg: '0.5rem',
-        md: 'calc(0.5rem - 2px)',
-        sm: 'calc(0.5rem - 4px)',
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 };
 export default config;
