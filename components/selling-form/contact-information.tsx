@@ -1,6 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { FormField, FormInput, FormRadioGroup } from '@/components/ui/form';
-import { useFormContext } from 'react-hook-form';
 import { type ContactInformationSchema } from '@/schemas/selling-form/contact-information';
 
 type SellingFormValues = {
@@ -9,10 +8,6 @@ type SellingFormValues = {
 };
 
 export const ContactInformation = () => {
-  const {
-    formState: { errors },
-  } = useFormContext<SellingFormValues>();
-
   return (
     <Card>
       {/* 추가 정보 */}
